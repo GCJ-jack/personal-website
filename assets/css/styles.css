@@ -11,3 +11,13 @@ header.bg-white.text-dark {
 .navbar-dark .nav-link.text-dark {
     color: black;
 }
+
+.navbar-brand .logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.navbar-brand .ml-2 {
+    margin-left: 10px;
+}
