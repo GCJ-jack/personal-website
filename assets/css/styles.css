@@ -1,0 +1,13 @@
+/* styles.css */
+header.bg-white.text-dark {
+    background-color: white;
+    color: black;
+}
+
+.navbar-dark .navbar-brand.text-dark {
+    color: black;
+}
+
+.navbar-dark .nav-link.text-dark {
+    color: black;
+}
