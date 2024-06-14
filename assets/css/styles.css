@@ -4,6 +4,10 @@ header.bg-white.text-dark {
     color: black;
 }
 
+nav ul li {
+    padding-right: 20px; /* 每项右侧增加20px的内边距 */
+}
+
 .navbar-dark .navbar-brand.text-dark {
     color: black;
 }
@@ -20,4 +24,66 @@ header.bg-white.text-dark {
 
 .navbar-brand .ml-2 {
     margin-left: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.education-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.intro-font {
+    font-size: larger;
+    font-family: Serif;
+    line-height: 150%;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Ensures the last item has no extra margin */
+}
+
+h2.center {
+    text-align: center;
+}
+
+h3.center {
+    margin-top: 5%;
+    text-align: center;
+}
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    width: 550px; /* Adjust as needed */
+    display: block;
+    margin: auto;
+}
+
+.area-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
 }
