@@ -31,7 +31,7 @@ nav ul li {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
+}
 
 .profile-container {
     display: flex;
@@ -48,7 +48,6 @@ nav ul li {
     text-align: center;
     margin-top: 5%;
 }
-
 
 .intro-font {
     font-size: larger;
@@ -101,7 +100,6 @@ h3.center {
     margin-top: 7%;
 }
 
-
 .icon-container {
     display: flex;
     justify-content: space-around;
@@ -122,4 +120,29 @@ h3.center {
 .icon a {
     text-decoration: none;
     color: inherit;
+}
+
+.sliding-underline-nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block; /* 确保元素是行内块级 */
+}
+
+.sliding-underline-nav a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f00;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.sliding-underline-nav a:hover::before {
+    width: 100%;
+    left: 0;
 }
