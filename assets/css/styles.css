@@ -87,3 +87,39 @@ h3.center {
     text-align: center;
     margin-top: 5%;
 }
+
+.title-underline{
+    color: inherit;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    text-decoration-color: rgb(231, 5, 5);
+    transition: text-decoration-color 300ms;
+    text-underline-offset: 0.4em; /* Adjust the value as needed */
+}
+
+.grayline{
+    width: 80%;
+    margin-top: 7%;
+}
+
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.icon {
+    text-align: center;
+    margin: 10px;
+}
+.icon svg,
+.icon img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+.icon a {
+    text-decoration: none;
+    color: inherit;
+}
