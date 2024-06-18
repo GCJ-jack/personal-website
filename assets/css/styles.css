@@ -158,7 +158,13 @@ h3.center {
     --color-text: #222022;
     --color-highlight-primary: #FFEF7E;
     --color-highlight-secondary: #B7F9E9;
-    --border-radius-primary: 32px;
+    --border-radius-primary: 25px;
+    
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
 }
 
 .title{
@@ -167,37 +173,147 @@ h3.center {
     margin-bottom: 0%;
 }
 
-* {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 
 @media (min-width: 576px) {
     :root {
         --font-size-title: 40px;
+        --border-radius-primary: 25px;
     }
 }
+
+
 .blog-container {
     margin-top: 0;
     display: grid;
     place-items: center; /* 水平和垂直居中 */
+    border-radius: var(--border-radius-primary); /* 确保图片的圆角与卡片一致 */
+    
 }
 .card {
-    max-width: 700px;
-    border-radius: var(--border-radius-primary);
+    max-width: 960px;
     box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
     padding: 20px 20px 28px 20px;
     box-sizing: border-box;
     margin: 20px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    transition: 1s box-shadow;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    border-radius: var(--border-radius-primary); /* 确保图片的圆角与卡片一致 */
 }
+
+.card:hover {
+    box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+    border-radius: var(--border-radius-primary);
+}
+
+.card:hover::before, .card:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%; /* 确保伪元素与父元素相同宽度 */
+    height: 100%; /* 确保伪元素与父元素相同高度 */
+    background: #FDA8CF;
+    border-radius: var(--border-radius-primary);
+    z-index: -1;
+    animation: 1s clockwise infinite;
+}
+
+.card:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+    border-radius: var(--border-radius-primary); /* 确保图片的圆角与卡片一致 */
+}
+
+@keyframes clockwise {
+    0% {
+        top: -5px;
+        left: 0;
+    }
+    12% {
+        top: -2px;
+        left: 2px;
+    }
+    25% {
+        top: 0;
+        left: 5px;    
+    }
+    37% {
+        top: 2px;
+        left: 2px;
+    }
+    50% {
+        top: 5px;
+        left: 0;    
+    }
+    62% {
+        top: 2px;
+        left: -2px;
+    }
+    75% {
+        top: 0;
+        left: -5px;
+    }
+    87% {
+        top: -2px;
+        left: -2px;
+    }
+    100% {
+        top: -5px;
+        left: 0;    
+    }
+}
+
+@keyframes counterclockwise {
+    0% {
+        top: -5px;
+        right: 0;
+    }
+    12% {
+        top: -2px;
+        right: 2px;
+    }
+    25% {
+        top: 0;
+        right: 5px;    
+    }
+    37% {
+        top: 2px;
+        right: 2px;
+    }
+    50% {
+        top: 5px;
+        right: 0;    
+    }
+    62% {
+        top: 2px;
+        right: -2px;
+    }
+    75% {
+        top: 0;
+        right: -5px;
+    }
+    87% {
+        top: -2px;
+        right: -2px;
+    }
+    100% {
+        top: -5px;
+        right: 0;    
+    }
+}
+
 @media (min-width: 576px) {
     .card {
         flex-direction: row;
         align-items: center;
         margin: 40px;
         padding: 32px;
+        border-radius: var(--border-radius-primary);
     }
 }
 
@@ -234,6 +350,7 @@ h3.center {
     text-transform: uppercase;
     color: var(--color-text);
     margin-bottom: 6px;
+    border-radius: var(--border-radius-primary); /* 确保图片的圆角与卡片一致 */
 }
 @media (min-width: 576px) {
 
