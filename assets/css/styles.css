@@ -189,6 +189,14 @@ h3.center {
     border-radius: var(--border-radius-primary); /* 确保图片的圆角与卡片一致 */
     
 }
+
+.blog-font {
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    font-weight: bold;
+}
 .card {
     max-width: 960px;
     box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
